@@ -1,11 +1,15 @@
-public class MentorOrganizador extends Pessoa implements Mentoria, Organizacao, CriadorDeEventos{
+import ennums.ConhecimentoTecnico;
+import ennums.TipoDeEvento;
+
+public class MentorOrganizador extends Pessoa implements Mentoria, Organizacao, CriadorDeEventos {
 
     private MinistradorDeEventos eventoMinistrado;
     private Evento evento;
+    private Desafio desafio;
 
     public MentorOrganizador(String nome) {
         super(nome);
-        super.setNivelConhecimentoTecnico(Conhecimento.PROFISSIONAL);
+        super.setNivelConhecimentoTecnico(ConhecimentoTecnico.PROFISSIONAL);
         this.eventoMinistrado = new MinistradorDeEventos();
     }
 
@@ -19,6 +23,12 @@ public class MentorOrganizador extends Pessoa implements Mentoria, Organizacao, 
     @Override
     public void auxiliarAprendizes(Duvida duvida) {
        duvida.sanarDuvida();
+    }
+
+    @Override
+    public Desafio criarDesafio(String nomeDoDesafio, int prazoParaExecucao) {
+        desafio = new Desafio(nomeDoDesafio, prazoParaExecucao);
+        return this.desafio;
     }
 
     @Override

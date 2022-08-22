@@ -1,10 +1,15 @@
+import ennums.ConhecimentoTecnico;
+import ennums.TipoDeDuvida;
+
 public class Aprendiz extends Pessoa {
     private Duvida duvida;
     private boolean metaDiariaEstudos = false;
 
+
+
     public Aprendiz(String nome) {
         super(nome);
-        super.setNivelConhecimentoTecnico(Conhecimento.INICIANTE);
+        super.setNivelConhecimentoTecnico(ConhecimentoTecnico.INICIANTE);
     }
 
     public Duvida terDuvida (TipoDeDuvida tipoDeDuvida, String contextoDaDuvida){
@@ -22,5 +27,20 @@ public class Aprendiz extends Pessoa {
 
     public boolean isMetaDiariaEstudos() {
         return metaDiariaEstudos;
+    }
+
+    public void resolverDesafio(Desafio desafio, int quantosDiasParaResolucao){
+        desafio.resolverDesafio(desafio, quantosDiasParaResolucao);
+    }
+
+    public void compartilharConhecimento(Aprendiz aprendiz, String conteudo){
+        try {
+            if (aprendiz == this) {
+                throw new IllegalArgumentException();
+            }
+        } catch (IllegalArgumentException excecao){
+            System.out.println("Você deve compartilhar o conhecimento com outra pessoa.");
+        }
+        System.out.println("Conhecimento sobre: " + conteudo + " compartilhado.");
     }
 }

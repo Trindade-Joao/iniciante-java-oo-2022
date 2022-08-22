@@ -1,10 +1,12 @@
+import ennums.ConhecimentoTecnico;
+
 public abstract class Pessoa {
     private String nome;
-    private Conhecimento nivelConhecimentoTecnico;
+    private ConhecimentoTecnico nivelConhecimentoTecnicoTecnico;
 
-    public Pessoa(String nome, Conhecimento nivelConhecimentoTecnico){
+    public Pessoa(String nome, ConhecimentoTecnico nivelConhecimentoTecnicoTecnico){
         this.nome = nome;
-        this.nivelConhecimentoTecnico = nivelConhecimentoTecnico;
+        this.nivelConhecimentoTecnicoTecnico = nivelConhecimentoTecnicoTecnico;
     }
 
     public Pessoa(String nome) {
@@ -15,11 +17,11 @@ public abstract class Pessoa {
         return this.nome;
     }
 
-    public Conhecimento getNivelConhecimentoTecnico(){
-        return this.nivelConhecimentoTecnico;
+    public ConhecimentoTecnico getNivelConhecimentoTecnico(){
+        return this.nivelConhecimentoTecnicoTecnico;
     }
 
-    protected void setNivelConhecimentoTecnico(Conhecimento nivelConhecimentoTecnico){
-        this.nivelConhecimentoTecnico = nivelConhecimentoTecnico;
+    protected void setNivelConhecimentoTecnico(ConhecimentoTecnico nivelConhecimentoTecnicoTecnico){
+        this.nivelConhecimentoTecnicoTecnico = nivelConhecimentoTecnicoTecnico;
     }
 }

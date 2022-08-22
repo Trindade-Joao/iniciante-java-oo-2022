@@ -1,3 +1,5 @@
+import ennums.TipoDeDuvida;
+
 public class Duvida {
 
     private TipoDeDuvida tipoDeDuvida;

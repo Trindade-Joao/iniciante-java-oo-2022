@@ -1,7 +1,11 @@
+import ennums.ConhecimentoTecnico;
+import ennums.TipoDeDuvida;
+import ennums.TipoDeEvento;
+
 public class Organizador extends Pessoa implements Organizacao, CriadorDeEventos {
         private Evento evento;
-    public Organizador(String nome, Conhecimento nivelConhecimentoTecnico) {
-        super(nome, nivelConhecimentoTecnico);
+    public Organizador(String nome, ConhecimentoTecnico nivelConhecimentoTecnicoTecnico) {
+        super(nome, nivelConhecimentoTecnicoTecnico);
 
     }
 

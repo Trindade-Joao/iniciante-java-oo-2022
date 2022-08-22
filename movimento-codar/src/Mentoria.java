@@ -5,5 +5,7 @@ public interface Mentoria {
 
      void auxiliarAprendizes(Duvida duvida);
 
+     Desafio criarDesafio(String nomeDoDesafio, int prazoParaExecucao);
+
 
 }

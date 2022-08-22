@@ -1,17 +1,27 @@
-public class Evento {
-    private int diaDoEvento;
-    private CriadorDeEventos criadorDoEvento;
+import ennums.TipoDeEvento;
 
-    private String nomeCriadorDoEvento;
-    private TipoDeEvento tipoDeEvento;
-    private Evento evento;
+public class Evento {
+    private final int diaDoEvento;
+    private final CriadorDeEventos criadorDoEvento;
+
+    private final String nomeCriadorDoEvento;
+    private final TipoDeEvento tipoDeEvento;
+
 
 
     public Evento (CriadorDeEventos criadorDoEvento, String nomeCriadorDoEvento, TipoDeEvento tipoDeEvento, int diaDoEvento){
+        try {
+            if (diaDoEvento < 1 || diaDoEvento > 31) {
+                throw new IllegalArgumentException();
+            }
+        }catch (IllegalArgumentException excecao){
+            System.out.println("Data inválida.");
+        }
         this.criadorDoEvento = criadorDoEvento;
         this.tipoDeEvento = tipoDeEvento;
         this.diaDoEvento = diaDoEvento;
         this.nomeCriadorDoEvento = nomeCriadorDoEvento;
+        System.out.println("Evento agendado com sucesso.");
     }
 
     public int getDiaDoEvento (){
