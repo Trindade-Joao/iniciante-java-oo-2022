@@ -1,6 +1,13 @@
-import ennums.ConhecimentoTecnico;
-import ennums.TipoDeEvento;
+package atores;
 
+import atores.Pessoa;
+
+import ennums.*;
+import eventos.Duvida;
+import interfaces.*;
+import composicao.MinistradorDeEventos;
+import eventos.Evento;
+import eventos.Desafio;
 public class MentorOrganizador extends Pessoa implements Mentoria, Organizacao, CriadorDeEventos {
 
     private MinistradorDeEventos eventoMinistrado;

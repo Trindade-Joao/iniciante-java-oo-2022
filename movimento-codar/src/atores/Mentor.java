@@ -1,6 +1,15 @@
+package atores;
+
+import composicao.MinistradorDeEventos;
 import ennums.ConhecimentoTecnico;
 import ennums.TipoDeDuvida;
 import ennums.TipoDeEvento;
+import eventos.Desafio;
+import eventos.Duvida;
+import eventos.Evento;
+import interfaces.CriadorDeEventos;
+import interfaces.Mentoria;
+
 
 public class Mentor extends Pessoa implements Mentoria, CriadorDeEventos {
     private Evento evento;
@@ -30,7 +39,7 @@ public class Mentor extends Pessoa implements Mentoria, CriadorDeEventos {
         if (duvida.getTipoDeDuvida() == TipoDeDuvida.TECNICA) {
             duvida.sanarDuvida();
         } else {
-            System.out.println("Duvida sobre o processo, procurar alguém da organização.");
+            System.out.println("eventos.Duvida sobre o processo, procurar alguém da organização.");
         }
     }
 

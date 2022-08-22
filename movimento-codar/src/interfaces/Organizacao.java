@@ -1,3 +1,7 @@
+package interfaces;
+
+import eventos.Duvida;
+
 public interface Organizacao {
 
 

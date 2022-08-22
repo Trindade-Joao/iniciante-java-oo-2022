@@ -1,3 +1,5 @@
+package atores;
+
 import ennums.ConhecimentoTecnico;
 
 public abstract class Pessoa {

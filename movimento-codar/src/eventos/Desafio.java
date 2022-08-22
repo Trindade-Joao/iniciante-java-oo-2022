@@ -1,3 +1,5 @@
+package eventos;
+
 public class Desafio {
 
     private int prazoParaExecucao;

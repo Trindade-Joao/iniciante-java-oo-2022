@@ -1,3 +1,9 @@
+package interfaces;
+
+import eventos.Desafio;
+import eventos.Duvida;
+import eventos.Evento;
+
 public interface Mentoria {
 
 

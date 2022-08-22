@@ -1,11 +1,12 @@
+package atores;
+
 import ennums.ConhecimentoTecnico;
 import ennums.TipoDeDuvida;
+import eventos.Desafio;
+import eventos.Duvida;
 
 public class Aprendiz extends Pessoa {
-    private Duvida duvida;
     private boolean metaDiariaEstudos = false;
-
-
 
     public Aprendiz(String nome) {
         super(nome);
@@ -13,16 +14,11 @@ public class Aprendiz extends Pessoa {
     }
 
     public Duvida terDuvida (TipoDeDuvida tipoDeDuvida, String contextoDaDuvida){
-        duvida = new Duvida(tipoDeDuvida, contextoDaDuvida);
-        return this.duvida;
+        return new Duvida(tipoDeDuvida, contextoDaDuvida);
     }
 
     public void estudar(int horasDiariasDeEstudo){
-        if (horasDiariasDeEstudo >=4){
-            this.metaDiariaEstudos = true;
-        }else {
-            this.metaDiariaEstudos = false;
-        }
+        this.metaDiariaEstudos = horasDiariasDeEstudo >= 4;
     }
 
     public boolean isMetaDiariaEstudos() {

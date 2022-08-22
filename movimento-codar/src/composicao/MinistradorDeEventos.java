@@ -1,3 +1,7 @@
+package composicao;
+
+import eventos.Evento;
+
 public class MinistradorDeEventos {
 
     public void ministrarEvento(int diaDeHoje, Evento evento){
@@ -7,7 +11,7 @@ public class MinistradorDeEventos {
             }
             System.out.println("O Evento " + evento.getTipoDeEvento() + " está acontecendo.");
         } catch (IllegalArgumentException excecao) {
-            System.out.println("O Evento foi marcado para uma data diferente");
+            System.out.println("O Evento" + evento.getTipoDeEvento() + "foi marcado para uma data diferente");
         }
     }
 

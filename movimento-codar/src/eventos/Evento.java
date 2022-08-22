@@ -1,4 +1,7 @@
+package eventos;
+
 import ennums.TipoDeEvento;
+import interfaces.CriadorDeEventos;
 
 public class Evento {
     private final int diaDoEvento;
@@ -21,7 +24,7 @@ public class Evento {
         this.tipoDeEvento = tipoDeEvento;
         this.diaDoEvento = diaDoEvento;
         this.nomeCriadorDoEvento = nomeCriadorDoEvento;
-        System.out.println("Evento agendado com sucesso.");
+        System.out.println("Evento " + this.tipoDeEvento + " agendado com sucesso.");
     }
 
     public int getDiaDoEvento (){

@@ -1,9 +1,18 @@
+package atores;
+
+import atores.Pessoa;
 import ennums.ConhecimentoTecnico;
 import ennums.TipoDeDuvida;
 import ennums.TipoDeEvento;
+import eventos.Duvida;
+import eventos.Evento;
+import interfaces.CriadorDeEventos;
+import interfaces.Organizacao;
 
 public class Organizador extends Pessoa implements Organizacao, CriadorDeEventos {
         private Evento evento;
+
+
     public Organizador(String nome, ConhecimentoTecnico nivelConhecimentoTecnicoTecnico) {
         super(nome, nivelConhecimentoTecnicoTecnico);
 
@@ -20,7 +29,7 @@ public class Organizador extends Pessoa implements Organizacao, CriadorDeEventos
         if(duvida.getTipoDeDuvida() == TipoDeDuvida.PROCESSO){
             duvida.sanarDuvida();
         }else{
-            System.out.println("Duvida Técnica, procurar alguém da Mentoria.");
+            System.out.println("eventos.Duvida Técnica, procurar alguém da interfaces.Mentoria.");
         }
     }
 }
