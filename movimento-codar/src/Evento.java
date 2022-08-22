@@ -1,19 +1,17 @@
 public class Evento {
     private int diaDoEvento;
-    private CriadorDeEvento criadorDoEvento;
+    private CriadorDeEventos criadorDoEvento;
 
     private String nomeCriadorDoEvento;
     private TipoDeEvento tipoDeEvento;
     private Evento evento;
 
 
-
-    public Evento (CriadorDeEvento criadorDoEvento, String nomeCriadorDoEvento, TipoDeEvento tipoDeEvento, int diaDoEvento){
+    public Evento (CriadorDeEventos criadorDoEvento, String nomeCriadorDoEvento, TipoDeEvento tipoDeEvento, int diaDoEvento){
         this.criadorDoEvento = criadorDoEvento;
         this.tipoDeEvento = tipoDeEvento;
         this.diaDoEvento = diaDoEvento;
         this.nomeCriadorDoEvento = nomeCriadorDoEvento;
-
     }
 
     public int getDiaDoEvento (){
@@ -24,7 +22,7 @@ public class Evento {
         return this.tipoDeEvento;
    }
 
-    public CriadorDeEvento getCriadorDoEvento() {
+    public CriadorDeEventos getCriadorDoEvento() {
         return criadorDoEvento;
     }
 
